@@ -1,19 +1,19 @@
-;Author: Sabbir Hossain           
+; Author: Sabbir Hossain           
 
-org 100h
+; Even -> DX = 0
+; Odd  -> DX = 1
 
- mov ax,101
- and ax,1
- jz even
- jnz odd
- even:
-  mov dx,0h
-  ret
- odd:
-  mov dx,1h
+ORG 100h
 
-ret
+MOV AX, 123h
+AND AX, 1
+JZ EVEN
+JNZ ODD
 
-;even -> dx=0
-;odd  -> dx=1
+EVEN:
+  MOV DX, 0h
+  RET
 
+ODD:
+  MOV DX, 1h
+  RET
