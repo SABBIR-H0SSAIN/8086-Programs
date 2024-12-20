@@ -1,35 +1,37 @@
-;Author: Sabbir Hossain
+; Author: Sabbir Hossain
 
-;Count numer of even and odds from an array
-;count[0] -> even count
-;count[1[ -> odd count
+; Count number of evens and odds from an array
+; COUNT[0] -> Even Count
+; COUNT[1] -> Odd Count
 
-org 100h
+ORG 100h
 
-MOV CX,9
-MOV SI,0
-MOV BX,0
-MOV DX,0
+MOV CX, 9
+MOV SI, 0
+MOV BX, 0
+MOV DX, 0
 
-traverse:
- MOV Al,array[SI]
- AND Al,1
- JZ even
- JNZ odd
- even:
+TRAVERSE:
+ MOV AL, ARRAY[SI]
+ AND AL, 1
+ JZ EVEN
+ JNZ ODD
+
+EVEN:
   INC BX
-  JMP next
- odd:
+  JMP NEXT
+
+ODD:
   INC DX
-  JMP next
- next:
+  JMP NEXT
+
+NEXT:
   INC SI
-  MOV count[0], Bl
-  MOV count[1], Dl
-  LOOP traverse 
+  MOV COUNT[0], BL
+  MOV COUNT[1], DL
+  LOOP TRAVERSE 
 
-ret
-array DB 1,2,3,4,5,6,7,8,9
-count DB 0,0 
+RET
 
-
+ARRAY DB 1, 2, 3, 4, 5, 6, 7, 8, 9
+COUNT DB 0, 0
