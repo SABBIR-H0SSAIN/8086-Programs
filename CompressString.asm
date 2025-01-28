@@ -1,8 +1,6 @@
-;8086 program to compress a user-inputted string 
-;by counting consecutive repeated characters and 
-;storing the results in an output buffer. 
+;8086 program to compress a user-inputted string by counting consecutive repeated characters and storing the results in an output buffer. 
 
-;example:
+;Example:
 ;   aaaazzzdddsss -> a4z3d3s3
 ;   ssaaabbiiir   -> s2a3b2i3r1
 
